@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p id="1">hi</p>
+	<p id="2">hii</p>
+</body>
+<script>
+	let div = document.createElement('div');
+	let textNode = document.createTextNode('Hello I am a text Node');
+	div.className = 'alert';
+	div.innerHTML = "<strong>Hi, There!</strong> here i am";
+	document.body.append(div);
+	// document.body.append(textNode);
+	// div.after("\n654534")
+	// div.before("front\n")
+	div.insertAdjacentHTML('afterbegin', '<p>Hello</p>');
+	div.insertAdjacentHTML('beforebegin',"<h1>Title</h1>");
+	div.insertAdjacentHTML('beforeend',"<p>before end</p>");
+	div.insertAdjacentHTML('afterend',"<p>last one</p>");
+	setTimeout( () => div.remove(), 5000 );
+	
+</script>
+</html>
